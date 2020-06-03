@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "npx vuepress dev docs",
-    "docs:build": "npx vuepress build docs"
+    "devStart": "npx vuepress dev docs",
+    "build": "npx vuepress build docs"
   },
   "dependencies":{
     "vuepress":"^1.5.0"
