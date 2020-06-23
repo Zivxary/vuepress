@@ -2,7 +2,11 @@
   <main class="page">
     <slot name="top" />
 
-    <Content class="theme-default-content" />
+    <div class="theme-default-content" >
+      <ListPage v-if="page_type == 'list'"/>
+      <Content  v-else/>
+    </div>
+
     <PageEdit />
 
     <PageNav v-bind="{ sidebarItems }" />
@@ -14,11 +18,17 @@
 <script>
 import PageEdit from '@theme/components/PageEdit.vue'
 import PageNav from '@theme/components/PageNav.vue'
+import ListPage from '@theme/components/ListPage.vue'
 
 export default {
-  components: { PageEdit, PageNav },
-  props: ['sidebarItems']
-}
+  components: { PageEdit, PageNav, ListPage },
+  props: ['sidebarItems'],
+  computed: {
+    page_type() {
+      return this.$page.frontmatter.PageType
+    },
+  }
+};
 </script>
 
 <style lang="stylus">
