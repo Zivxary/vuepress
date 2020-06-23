@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "devStart": "npx vuepress dev docs",
+    "doc:dev": "vuepress dev docs",
+    "doc:build": "vuepress build docs",
     "build": "npx vuepress build docs"
   },
-  "dependencies":{
-    "vuepress":"^1.5.0"
+  "dependencies": {
+    "vuepress": "^1.5.0"
   },
   "keywords": [],
   "author": "",
