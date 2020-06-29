@@ -7,7 +7,7 @@
         <h3 class="title"> {{ pageInfo.title }} </h3>
         <hr>
         <div>{{ pageInfo.content }}</div>
-        <a v-bind:href="pageInfo.path"
+        <a v-bind:href="$withBase(pageInfo.path)"
           class="read-more">
           {{ $page.frontmatter.ListReadMore }}
         </a>
